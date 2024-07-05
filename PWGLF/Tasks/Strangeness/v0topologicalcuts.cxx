@@ -28,7 +28,6 @@ This analysis includes two processes, one for Real Data and one for MC Data swit
 #include "Common/DataModel/PIDResponse.h"
 
 //namespaces to be used for the plot names and topological cuts that will be given by a configurable string
-//
 namespace cuthistoskzerosh{
 std::shared_ptr<TH1> cospaCut[20];
 static std::vector<std::string> cospacuts; 
