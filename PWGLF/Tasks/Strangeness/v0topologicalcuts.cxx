@@ -489,8 +489,8 @@ struct v0topologicalcuts {
     double mK0shPDG = o2::constants::physics::MassK0Short;   // Kaon mass for comp mass cut
     double mLambdaPDG = o2::constants::physics::MassLambda0; // Lambda mass for comp mass cut
     for (const auto& v0 : V0s) {
-    const auto& posDaughterTrack = v0.posTrack_as<DaughterTracks>();
-    const auto& negDaughterTrack = v0.negTrack_as<DaughterTracks>();
+      const auto& posDaughterTrack = v0.posTrack_as<DaughterTracks>();
+      const auto& negDaughterTrack = v0.negTrack_as<DaughterTracks>();
       if (std::abs(v0.y()) < rapidityCut) {
         if (std::abs(v0.posTrack_as<DaughterTracks>().eta()) < etadau && std::abs(v0.negTrack_as<DaughterTracks>().eta()) < etadau) { // daughters pseudorapidity cut
           rV0ParametersData.fill(HIST("hMassK0ShortNoCuts_V0Data"), v0.mK0Short());
